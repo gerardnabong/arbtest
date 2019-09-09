@@ -21,7 +21,10 @@ Route::resource('users','UsersController' );
 
 Route::get('/','PagesController@dashboard' );
 Route::get('/dashboard','PagesController@dashboard');
-//Route::get('/role','PagesController@role' );
+
+Route::get('/dashboard','PagesController@dashboard');
+
+Route::resource('samplevues','SampleVueController' );
 
 
 

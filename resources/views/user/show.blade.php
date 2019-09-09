@@ -4,6 +4,8 @@
 
 <h1>Edit User</h1>
 
+<example-component></example-component>
+
 
 {!! Form::open(['action' => ['UsersController@update', $user->id ], 'method' => 'POST'])!!}
 

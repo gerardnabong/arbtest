@@ -39,5 +39,5 @@
     @else
         <p>No Roles Found</p>
     @endif
-<a href="/public/roles/create" class="btn btn-success">Add Role</a>
+<a href="/roles/create" class="btn btn-success">Add Role</a>
 @endsection
