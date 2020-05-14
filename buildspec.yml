@@ -52,8 +52,8 @@ phases:
       #- printf '[{"name":"laravel_app","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > image_definitions-laravel_app.json
       #- printf '[{"name":"laravel_cron","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > image_definitions-laravel_cron.json
       - echo Writing image definitions file...
-      #- IMAGE_DIFINITION_PHP_FPM="{\"name\":\"php-fpm\",\"imageUri\":\"${REPOSITORY_URI_PHPFPM}:${IMAGE_TAG}\"}"
-      #- IMAGE_DIFINITION_NGINX="{\"name\":\"nginx\",\"imageUri\":\"${REPOSITORY_URI_NGINX}:${IMAGE_TAG}\"}"
+      - IMAGE_DIFINITION_PHP_FPM="{\"name\":\"php-fpm\",\"imageUri\":\"${REPOSITORY_URI_PHPFPM}:${IMAGE_TAG}\"}"
+      - IMAGE_DIFINITION_NGINX="{\"name\":\"apache2\",\"imageUri\":\"${REPOSITORY_URI_NGINX}:${IMAGE_TAG}\"}"
       - echo "[${IMAGE_DIFINITION_PHP_FPM},${IMAGE_DIFINITION_NGINX}]" > imagedefinitions.json
 artifacts:
   files: imagedefinitions.json
