@@ -8,7 +8,7 @@ phases:
       - aws --version
       - aws ecr get-login-password --region ap-southeast-1 | docker login --username AWS --password-stdin 928364608251.dkr.ecr.ap-southeast-1.amazonaws.com
         # Copy "RepositoryURI" from output of CloudFormation Stack "laravel-ecr"
-      - REPOSITORY_URI_NGINX=928364608251.dkr.ecr.ap-southeast-1.amazonaws.com/apache2
+      - npm =928364608251.dkr.ecr.ap-southeast-1.amazonaws.com/apache2
       - REPOSITORY_URI_PHPFPM=928364608251.dkr.ecr.ap-southeast-1.amazonaws.com/phpfpm
       - IMAGE_TAG=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - printenv
@@ -28,7 +28,7 @@ phases:
       - echo NPM Install
       - npm install
       - echo NPM Build
-      - npm run production
+      #- npm run production
       #- echo Database Migration
       #- php artisan migrate --force
       - echo Build started on `date`
