@@ -56,6 +56,7 @@ phases:
       - IMAGE_DIFINITION_PHP_FPM="{\"name\":\"php-fpm\",\"imageUri\":\"${REPOSITORY_URI_PHPFPM}:${IMAGE_TAG}\"}"
       - IMAGE_DIFINITION_APACHE="{\"name\":\"apache2\",\"imageUri\":\"${REPOSITORY_URI_APACHE}:${IMAGE_TAG}\"}"
       - echo "[${IMAGE_DIFINITION_PHP_FPM},${IMAGE_DIFINITION_APACHE}]" > imagedefinitions.json
+      
 artifacts:
   files: imagedefinitions.json
   discard-paths: yes
